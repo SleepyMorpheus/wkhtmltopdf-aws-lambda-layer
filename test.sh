@@ -49,7 +49,8 @@ invoke_lambda_function() {
 # Test layer on:
 #   operating system: Amazon Linux, runtime: Java 8
 #   operating system: Amazon Linux 2, runtime: Java 11
-JAVA_RUNTIMES="java8 java11"
+#   operating system: Amazon Linux 2023, runtime: Java 17, Java 21
+JAVA_RUNTIMES="java8 java11 java17 java21"
 JAVA_DIR="$PWD/tests/java"
 
 # Package Java file. See: https://docs.aws.amazon.com/lambda/latest/dg/create-deployment-pkg-zip-java.html
@@ -64,9 +65,9 @@ done
 
 # Test layer on:
 #   operating system: Amazon Linux, runtime: Node.js 8.10
-#   operating system: Amazon Linux 2, runtime: Node.js 10
-#   operating system: Amazon Linux 2, runtime: Node.js 12
-NODEJS_RUNTIMES="nodejs8.10 nodejs10.x nodejs12.x"
+#   operating system: Amazon Linux 2, runtime: Node.js 10, Node.js 12
+#   operating system: Amazon Linux 2023, runtime: Node.js 18, Node.js 20
+NODEJS_RUNTIMES="nodejs8.10 nodejs10.x nodejs12.x nodejs18.x nodejs20.x"
 
 for runtime in $NODEJS_RUNTIMES; do
     invoke_lambda_function \
@@ -76,10 +77,10 @@ for runtime in $NODEJS_RUNTIMES; do
 done
 
 # Test layer on:
-#   operating system: Amazon Linux, runtime: Python 3.6
-#   operating system: Amazon Linux, runtime: Python 3.7
+#   operating system: Amazon Linux, runtime: Python 3.6, Python 3.7
 #   operating system: Amazon Linux 2, runtime: Python 3.8
-PYTHON_RUNTIMES="python3.6 python3.7 python3.8"
+#   operating system: Amazon Linux 2023, runtime: Python 3.12, Python 3.13
+PYTHON_RUNTIMES="python3.6 python3.7 python3.8 python3.12 python3.13"
 
 for runtime in $PYTHON_RUNTIMES; do
     invoke_lambda_function \
