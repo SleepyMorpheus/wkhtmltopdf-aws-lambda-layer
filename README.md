@@ -50,7 +50,9 @@ Refer to the following scripts to build and publish your own wkhtmltopdf layer.
    - `./build.sh` or `./build.sh al2` - builds for Amazon Linux 2 (default)
    - `./build.sh al2023` - builds for Amazon Linux 2023
 2. Run `./test.sh` to test the layer zip.
-3. Run `./publish.sh` to publish the layer zip to regions specified in `/config/regions.txt`.
+3. Run `./publish.sh [al2|al2023]` to publish the layer zip to regions specified in `/config/regions.txt`.
+   - `./publish.sh` or `./publish.sh al2` - publishes Amazon Linux 2 layer (default)
+   - `./publish.sh al2023` - publishes Amazon Linux 2023 layer
 
 ## Fonts
 
