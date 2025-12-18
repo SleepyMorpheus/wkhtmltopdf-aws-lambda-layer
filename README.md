@@ -4,7 +4,7 @@
 
 ## Operating Systems
 
-This layer supports both _Amazon Linux_ and _Amazon Linux 2_.
+This layer supports _Amazon Linux_, _Amazon Linux 2_, and _Amazon Linux 2023_.
 
 ## Getting Started
 
@@ -46,7 +46,9 @@ Refer to `/tests` directory for example usage.
 
 Refer to the following scripts to build and publish your own wkhtmltopdf layer.
 
-1. Run `./build.sh` to build a new layer zip.
+1. Run `./build.sh [al2|al2023]` to build a new layer zip.
+   - `./build.sh` or `./build.sh al2` - builds for Amazon Linux 2 (default)
+   - `./build.sh al2023` - builds for Amazon Linux 2023
 2. Run `./test.sh` to test the layer zip.
 3. Run `./publish.sh` to publish the layer zip to regions specified in `/config/regions.txt`.
 
